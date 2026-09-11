@@ -1,70 +1,82 @@
 # 💳 Credit Card Fraud Detection
 
-A Machine Learning project designed to detect fraudulent credit card transactions by analyzing transaction patterns and classifying them as **legitimate or fraudulent**.
+A Machine Learning-based web application designed to detect potentially fraudulent credit card transactions by analyzing transaction features and classifying them as **legitimate or fraudulent**.
 
 ## 📌 Overview
 
-Credit card fraud is a major challenge in the financial sector due to the large volume of transactions and constantly evolving fraud patterns. This project applies Machine Learning techniques to identify suspicious transactions and improve the detection of fraudulent activity.
+Credit card fraud is a major challenge in the financial sector due to the large volume of transactions and constantly evolving fraud patterns.
 
-The project includes data preprocessing, exploratory data analysis, handling of class imbalance, model training, and performance evaluation.
+This project uses Machine Learning techniques to identify potentially fraudulent transactions. The project includes data preprocessing, feature scaling, model training, evaluation, and a Flask-based web interface for making predictions.
 
 ## 🚀 Key Features
 
-* Data preprocessing and cleaning
-* Exploratory Data Analysis (EDA)
-* Handling highly imbalanced transaction data
-* Feature scaling and preparation
-* Training and comparison of Machine Learning models
-* Fraudulent vs. legitimate transaction classification
-* Model performance evaluation using appropriate classification metrics
+- Data preprocessing and cleaning
+- Handling transaction data
+- Feature scaling using `StandardScaler`
+- Machine Learning-based fraud classification
+- Model training using Logistic Regression
+- Model evaluation using classification metrics
+- Flask web application for fraud prediction
+- User-friendly prediction interface
+- Saved trained model and scalers for prediction
 
 ## 🛠️ Technologies Used
 
-* **Python**
-* **Pandas**
-* **NumPy**
-* **Scikit-learn**
-* **Matplotlib**
-* **Seaborn**
-* **Jupyter Notebook**
+- **Python**
+- **NumPy**
+- **Pandas**
+- **Scikit-learn**
+- **Flask**
+- **Pickle**
+- **HTML/CSS**
 
 ## 🤖 Machine Learning
 
-The project explores classification techniques for identifying fraudulent transactions. Since fraud detection datasets are typically highly imbalanced, evaluation focuses on metrics such as:
+The project uses **Logistic Regression** for classifying credit card transactions.
 
-* Precision
-* Recall
-* F1-Score
-* Confusion Matrix
-* ROC-AUC
+The transaction features are processed and scaled before being passed to the trained model.
 
-Special attention is given to **recall and precision**, as incorrectly classifying fraudulent transactions can have significant consequences.
-
-## 📊 Workflow
+### Model Pipeline
 
 ```text
-Dataset
-   ↓
-Data Cleaning & Preprocessing
-   ↓
-Exploratory Data Analysis
-   ↓
-Handle Class Imbalance
-   ↓
+Transaction Data
+       ↓
+Data Preprocessing
+       ↓
+Feature Selection
+       ↓
 Feature Scaling
-   ↓
-Train/Test Split
-   ↓
-Model Training
-   ↓
-Model Evaluation
-   ↓
+       ↓
+Logistic Regression
+       ↓
 Fraud Prediction
+       ↓
+Legitimate / Fraudulent
 ```
 
-## 🎯 Objective
+The trained model and preprocessing scalers are stored as `.pkl` files and loaded by the Flask application during prediction.
 
-The primary objective of this project is to build a reliable Machine Learning solution capable of detecting potentially fraudulent credit card transactions while minimizing incorrect classifications.
+## 🌐 Web Application
+
+The project includes a Flask-based web application that allows users to enter transaction details and receive a fraud prediction.
+
+### Application Flow
+
+```text
+User
+ ↓
+Flask Web Interface
+ ↓
+Transaction Details
+ ↓
+Feature Preprocessing
+ ↓
+Trained ML Model
+ ↓
+Prediction
+ ↓
+Legitimate / Fraudulent
+```
 
 ## 📁 Project Structure
 
@@ -72,25 +84,124 @@ The primary objective of this project is to build a reliable Machine Learning so
 Credit-Card-Fraud-Detection/
 │
 ├── data/
-├── notebooks/
-├── src/
+│   └── miniproject.csv
+│
 ├── models/
+│   ├── amount.pkl
+│   ├── model.pkl
+│   └── time.pkl
+│
+├── src/
+│   └── miniproject.py
+│
+├── static/
+│   └── many-credit-cards-on-blurred-600nw-2478118299.jpg
+│
+├── templates/
+│   └── index.html
+│
+├── .gitignore
+├── app.py
 ├── README.md
-├── requirements.txt
-└── .gitignore
+└── requirements.txt
 ```
+
+## 📊 Dataset
+
+The project uses a credit card transaction dataset containing transaction-related features used to train the fraud detection model.
+
+The dataset is stored in:
+
+```text
+data/miniproject.csv
+```
+
+## 📈 Model Evaluation
+
+The Machine Learning model can be evaluated using classification metrics such as:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+
+For fraud detection, **precision and recall** are particularly important because both false positives and false negatives can have significant consequences.
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Sandeep-2425/Credit-Card-Fraud-Detection.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd Credit-Card-Fraud-Detection
+```
+
+### 3. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### macOS/Linux
+
+```bash
+source venv/bin/activate
+```
+
+### 5. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## ▶️ Running the Application
+
+Start the Flask application:
+
+```bash
+python app.py
+```
+
+The application will run locally.
+
+Open the displayed local URL in your web browser.
+
+## 🎯 Objective
+
+The primary objective of this project is to develop a Machine Learning-based fraud detection system capable of identifying potentially fraudulent credit card transactions.
+
+The project also demonstrates how a trained Machine Learning model can be integrated into a Flask web application for real-world prediction.
 
 ## 🔮 Future Improvements
 
-* Hyperparameter optimization
-* Advanced ensemble models
-* Real-time fraud detection
-* Deployment using Flask/FastAPI
-* Interactive prediction dashboard
-* Integration with streaming transaction data
+- Hyperparameter optimization
+- Experiment with advanced classification algorithms
+- Improve handling of class imbalance
+- Model performance optimization
+- Real-time fraud detection
+- Deployment using cloud platforms
+- Interactive analytics dashboard
+- Integration with real-time transaction streams
+- REST API deployment using Flask/FastAPI
 
 ## 👨‍💻 Author
 
 **Sandeep Bisht**
 
 MCA | Artificial Intelligence & Machine Learning
+
+📧 **Email:** ssandeepbisht@gmail.com
