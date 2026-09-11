@@ -200,8 +200,8 @@ The project also demonstrates how a trained Machine Learning model can be integr
 
 ## 👨‍💻 Author
 
-Sandeep Bisht
+**Sandeep Bisht**
 
 MCA | Artificial Intelligence & Machine Learning
 
-📧 [ssandeepbisht@gmail.com](mailto:ssandeepbisht@gmail.com)
+📧 **Email:** [ssandeepbisht2402@gmail.com](mailto:ssandeepbisht2402@gmail.com)
