@@ -6,7 +6,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix, classification_report
 import pickle
-df=pd.read_csv('/content/miniproject.csv')
+
+df = pd.read_csv('data/miniproject.csv')
 
 df.head(5)
 

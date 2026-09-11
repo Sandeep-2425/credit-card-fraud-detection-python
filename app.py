@@ -5,9 +5,9 @@ import pickle
 
 app = Flask(__name__)
 
-model = pickle.load(open('model.pkl','rb'))
-amount_scaler = pickle.load(open('amount.pkl','rb'))
-time_scaler = pickle.load(open('time.pkl','rb'))
+model = pickle.load(open('models/model.pkl', 'rb'))
+amount_scaler = pickle.load(open('models/amount.pkl', 'rb'))
+time_scaler = pickle.load(open('models/time.pkl', 'rb'))
 
 
 @app.route('/')
